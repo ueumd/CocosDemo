@@ -1,4 +1,4 @@
-import { _decorator, Component, Node, v3, EventTouch, Vec3, Prefab, instantiate, PhysicsSystem2D, Contact2DType, resources, Sprite, SpriteFrame, Collider2D, find } from 'cc';
+import { _decorator, Component, Node, v3, EventTouch, Vec3, Prefab, instantiate, PhysicsSystem2D, Contact2DType, resources, Sprite, SpriteFrame, find, Collider2D, IPhysics2DContact } from 'cc';
 import { BackgroundCtrl } from './BackgroundCtrl';
 import { BulletCtrl } from './BulletCtrl';
 import { EnemyCtrl } from './EnemyCtrl';
@@ -78,7 +78,7 @@ export class PlayerCtrl extends Component {
             let enemy: Node = instantiate(this.enemyPrefab);
             enemy.setParent(this.node.parent);
             enemy.setPosition(xPos, 640);
-        }, 0.5);
+        }, 0.1);
 
 
         // 创建子弹

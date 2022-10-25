@@ -19,6 +19,8 @@ export class BulletCtrl extends Component {
             )
         )
 
+        // this.node.setWorldPosition(e.getUILocation().x, e.getUILocation().y, 0)
+
         if (this.node?.getPosition().y >= 1280) {
             this.node?.destroy()
         }
