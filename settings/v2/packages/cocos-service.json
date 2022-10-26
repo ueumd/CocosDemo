@@ -1,13 +1,17 @@
 {
   "game": {
-    "name": "未知游戏",
-    "app_id": "UNKNOW",
+    "app_id": "667612339",
+    "name": "CocosDemo",
     "c_id": "0"
   },
   "appConfigMaps": [
     {
       "app_id": "UNKNOW",
       "config_id": "78f28a"
+    },
+    {
+      "app_id": "667612339",
+      "config_id": "a96d73"
     }
   ],
   "configs": [
@@ -17,6 +21,22 @@
       "config_name": "Default",
       "config_remarks": "",
       "services": []
+    },
+    {
+      "app_id": "667612339",
+      "config_id": "a96d73",
+      "config_name": "Default",
+      "config_remarks": "",
+      "services": [
+        {
+          "service_id": "235",
+          "enable": true,
+          "param": {
+            "app_id": "667612339",
+            "store_id": "160564"
+          }
+        }
+      ]
     }
   ]
 }

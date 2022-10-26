@@ -21,8 +21,8 @@ export class Home extends Component {
   update(deltaTime: number) {}
 
   startBtn() {
-    // director.loadScene("buttonDemo");
-    director.loadScene("schedule");
+    director.loadScene("buttonDemo");
+    //director.loadScene("schedule");
   }
 
   loadScnen() {

@@ -68,7 +68,7 @@ export class PlayerCtrl extends Component {
 
         // 创建敌机
         this.schedule(() => {
-            let aNumber: number = 175 * Math.random() + 1;
+            let aNumber: number = 300 * Math.random() + 1;
             let xPos: number = Math.floor(aNumber);
             let symbol: boolean = Math.random() > 0.5;
             if (!symbol && xPos !== 0) {
@@ -78,7 +78,7 @@ export class PlayerCtrl extends Component {
             let enemy: Node = instantiate(this.enemyPrefab);
             enemy.setParent(this.node.parent);
             enemy.setPosition(xPos, 640);
-        }, 0.1);
+        }, 0.3);
 
 
         // 创建子弹
