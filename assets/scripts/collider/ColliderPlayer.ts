@@ -12,17 +12,14 @@ export class ColliderPlayer extends Component {
 
     onLoad() {
 
-      // 注册碰撞检测
-        PhysicsSystem2D.instance.on(
-            Contact2DType.BEGIN_CONTACT,
-            this.onBeginContact,
-            this
-        )
+      // 注册全局碰撞检测
+        PhysicsSystem2D.instance.on( Contact2DType.BEGIN_CONTACT,this.onBeginContact,this)
     }
 
     onBeginContact(otherCollider, selfCollider,contact:  IPhysics2DContact | null){
-        console.log('selfCollider:', selfCollider);
-        console.log('otherCollider:', otherCollider);
+      console.log('otherCollider:', otherCollider);  
+      console.log('selfCollider:', selfCollider);
+        
 
         // 好人组不碰撞
         // console.log('碰撞');

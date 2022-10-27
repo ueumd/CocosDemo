@@ -873,7 +873,7 @@
     "enabledContactListener": false,
     "bullet": true,
     "awakeOnLoad": true,
-    "_group": 4,
+    "_group": 1,
     "_type": 1,
     "_allowSleep": true,
     "_gravityScale": 1,
