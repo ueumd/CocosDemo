@@ -1,4 +1,4 @@
-import { _decorator, Component, Node, v3, EventTouch, Vec3, Prefab, instantiate, PhysicsSystem2D, Contact2DType, resources, Sprite, SpriteFrame, find, Collider2D, IPhysics2DContact } from 'cc';
+import { _decorator, Component, Node, v3, EventTouch, Vec3, Prefab, instantiate, PhysicsSystem2D, Contact2DType, resources, Sprite, SpriteFrame, find, Collider2D, IPhysics2DContact, NodePool } from 'cc';
 import { BackgroundCtrl } from './BackgroundCtrl';
 import { BulletCtrl } from './BulletCtrl';
 import { EnemyCtrl } from './EnemyCtrl';
@@ -12,6 +12,9 @@ export class PlayerCtrl extends Component {
 
     @property({ type: Prefab })
     private enemyPrefab: Prefab = null;
+
+    // 子弹对象池
+    static bulletPool: NodePool = new NodePool();
 
 
     onLoad() {
@@ -93,6 +96,7 @@ export class PlayerCtrl extends Component {
                 this.node.getPosition().x,
                 this.node.getPosition().y + 80
             )
+
         }, 0.1)
 
     }
